@@ -16,6 +16,6 @@ jobs:
           PRIVATE_KEY: ${{ secrets.BASTION_PRIVATE_KEY  }}
         run: |
           echo "$BASTION_PRIVATE_KEY" > private_key && chmod 600 private_key
-          ssh -o StrictHostKeyChecking=no -i private_key ec2-user@100.25.109.4 '
+          ssh -o StrictHostKeyChecking=no -i private_key ec2-user@100.25.109.4
           script: |
             /home/ec2-user/backend.sh
